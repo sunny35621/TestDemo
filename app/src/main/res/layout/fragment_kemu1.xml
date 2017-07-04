@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/kemu1Layout"
+    android:background="@color/day"
+    tools:context="com.example.administrator.testapplication.fragment.Kemu1Fragment">
+
+    <android.support.v4.view.ViewPager
+
+        android:id="@+id/lunboViewPager"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="140dp"></android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:layout_below="@id/lunboViewPager"
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:gravity="center"
+            android:button="@null"
+            android:id="@+id/button1"
+            android:text="顺序练习"
+            android:textColor="@color/night"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:gravity="center"
+            android:button="@null"
+            android:id="@+id/button2"
+            android:text="模拟考试"
+            android:textColor="@color/night"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:gravity="center"
+            android:button="@null"
+            android:id="@+id/button3"
+            android:text="我的错题"
+            android:textColor="@color/night"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:gravity="center"
+            android:button="@null"
+            android:id="@+id/button4"
+            android:text="我的收藏"
+            android:textColor="@color/night"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:layout_height="match_parent" />
+    </RadioGroup>
+<WebView
+    android:id="@+id/myWebView"
+    android:layout_below="@id/group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></WebView>
+</RelativeLayout>

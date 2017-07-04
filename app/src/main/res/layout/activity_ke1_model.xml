@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ke1_from_to"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d4f7ed"
+    tools:context="com.example.administrator.testapplication.Ke1FromToActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/fanhui"
+            android:onClick="goBack"
+            android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/datimoshi"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="模拟测试"
+                android:textColor="@color/night"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/datimoshi"
+                android:id="@+id/shijian"
+                android:gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+
+                android:textColor="@color/night"
+                android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/set"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/crossline"
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cde4df"
+        ></View>
+    <View
+        android:layout_centerHorizontal="true"
+        android:id="@+id/blank"
+        android:layout_width="14dp"
+        android:layout_height="0dp"></View>
+
+    <ScrollView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/crossline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv"
+                android:scaleType="centerCrop"
+                android:layout_width="350dp"
+                android:layout_height="150dp" />
+            <TextView
+                android:id="@+id/questionTV"
+                android:textSize="20sp"
+                android:textColor="@color/night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"></View>
+            <CheckBox
+                android:id="@+id/check1"
+                android:textSize="20sp"
+                android:textColor="#696b69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/check2"
+                android:textSize="20sp"
+                android:textColor="#696b69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/check3"
+                android:textSize="20sp"
+                android:textColor="#696b69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/check4"
+                android:textSize="20sp"
+                android:textColor="#696b69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"></View>
+            <TextView
+                android:textSize="18sp"
+                android:textColor="#072eaf"
+                android:id="@+id/explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:onClick="lastOne"
+                    android:text="上一题"
+                    android:textColor="@color/night"
+                    android:textSize="18sp"
+                    android:background="@drawable/button"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp" />
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"></View>
+                <Button
+
+                    android:onClick="nextOne"
+                    android:text="下一题"
+                    android:textColor="@color/night"
+                    android:textSize="18sp"
+                    android:background="@drawable/button"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp" /></LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/shoucanglayout"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="100dp"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/shoucang"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/shoucang"
+            android:background="#d4f7ed"
+            android:visibility="visible"
+            android:text="收藏"
+            android:onClick="shoucang"
+            android:textColor="@color/night"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/quxiaoshoucang"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/shoucang1"
+            android:background="#d4f7ed"
+            android:visibility="gone"
+            android:text="取消收藏"
+            android:onClick="quxiaoshoucang"
+            android:textColor="#f11d52"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/shoucanglayout"
+        android:layout_width="260dp"
+        android:layout_height="40dp">
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="210dp"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_height="match_parent" >
+                <ImageView
+                    android:id="@+id/hehe"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/cuowu"/>
+                <TextView
+                    android:layout_toRightOf="@+id/hehe"
+                    android:id="@+id/cuowushu"
+                    android:text="0"
+                    android:textColor="#f51e54"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_toRightOf="@+id/haha"
+                    android:id="@+id/zhengqueshu"
+                    android:textColor="#47ec2d"
+                    android:text="0"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/haha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/zhengque"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_toRightOf="@+id/heihei"
+                    android:id="@+id/zongji"
+                    android:textColor="#1c14b1"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/heihei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/zongji"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
